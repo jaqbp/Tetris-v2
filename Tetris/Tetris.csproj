@@ -30,23 +30,23 @@
 
   <ItemGroup>
     <Resource Include="Assets\Background.png" />
-    <Resource Include="Assets\Block-Empty.png" />
-    <Resource Include="Assets\Block-I.png" />
-    <Resource Include="Assets\Block-J.png" />
-    <Resource Include="Assets\Block-L.png" />
-    <Resource Include="Assets\Block-O.png" />
-    <Resource Include="Assets\Block-S.png" />
-    <Resource Include="Assets\Block-T.png" />
-    <Resource Include="Assets\Block-Z.png" />
+    <Resource Include="Assets\Blocks\Block-Empty.png" />
+    <Resource Include="Assets\Blocks\Block-I.png" />
+    <Resource Include="Assets\Blocks\Block-J.png" />
+    <Resource Include="Assets\Blocks\Block-L.png" />
+    <Resource Include="Assets\Blocks\Block-O.png" />
+    <Resource Include="Assets\Blocks\Block-S.png" />
+    <Resource Include="Assets\Blocks\Block-T.png" />
+    <Resource Include="Assets\Blocks\Block-Z.png" />
     <Resource Include="Assets\Icon.ico" />
-    <Resource Include="Assets\TileBlue.png" />
-    <Resource Include="Assets\TileCyan.png" />
-    <Resource Include="Assets\TileEmpty.png" />
-    <Resource Include="Assets\TileGreen.png" />
-    <Resource Include="Assets\TileOrange.png" />
-    <Resource Include="Assets\TilePurple.png" />
-    <Resource Include="Assets\TileRed.png" />
-    <Resource Include="Assets\TileYellow.png" />
+    <Resource Include="Assets\Tiles\TileBlue.png" />
+    <Resource Include="Assets\Tiles\TileCyan.png" />
+    <Resource Include="Assets\Tiles\TileEmpty.png" />
+    <Resource Include="Assets\Tiles\TileGreen.png" />
+    <Resource Include="Assets\Tiles\TileOrange.png" />
+    <Resource Include="Assets\Tiles\TilePurple.png" />
+    <Resource Include="Assets\Tiles\TileRed.png" />
+    <Resource Include="Assets\Tiles\TileYellow.png" />
   </ItemGroup>
 
 </Project>
