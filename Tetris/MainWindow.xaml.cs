@@ -30,7 +30,8 @@ namespace Tetris
             new BitmapImage(new Uri("Assets/Tiles/TileYellow.png", UriKind.Relative)),
             new BitmapImage(new Uri("Assets/Tiles/TileGreen.png", UriKind.Relative)),
             new BitmapImage(new Uri("Assets/Tiles/TilePurple.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Tiles/TileRed.png", UriKind.Relative))
+            new BitmapImage(new Uri("Assets/Tiles/TileRed.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Assets/Tiles/TileWhite.png", UriKind.Relative))
         };
 
         private readonly ImageSource[] blockImages = new ImageSource[]
@@ -91,10 +92,11 @@ namespace Tetris
             }
         }
 
-        private void DrawBlock(Block block)
+        private void DrawBlock(Block block, GameGrid grid)
         {
             foreach (Position p in block.TilePositions())
             {
+                if (p.Row < grid.Rows && p.Column < grid.Columns && p.Row >+ 0 && p.Column >= 0)
                 imageControls[p.Row, p.Column].Source = tileImages[block.Id];
             }
         }
@@ -102,8 +104,19 @@ namespace Tetris
         private void Draw(GameState gameState)
         {
             DrawGrid(gameState.GameGrid);
-            DrawBlock(gameState.CurrentBlock);
+            DrawBlock(gameState.CurrentBlock, gameState.GameGrid);
         }
+
+        private async Task GameLoop()
+        {
+            Draw(gameState);
+            while (!gameState.GameOver)
+            {
+                await Task.Delay(500);
+                gameState.MoveBlockDown();
+                Draw(gameState);
+            }
+        }      
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
@@ -135,9 +148,9 @@ namespace Tetris
             Draw(gameState);
         }
 
-        private void GameCanvas_Loaded(object sender, RoutedEventArgs e)
+        private async void GameCanvas_Loaded(object sender, RoutedEventArgs e)
         {
-            Draw(gameState);
+            await GameLoop();
         }
 
         private void PlayAgain_Click(object sender, RoutedEventArgs e)

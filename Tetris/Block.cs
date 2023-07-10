@@ -36,15 +36,15 @@ namespace Tetris
 
         public void RotateCCW()
         {
-            rotationState = (rotationState - 1) % Tiles.Length;
-            /*if (rotationState == 0)
+            /*rotationState = (rotationState - 1) % Tiles.Length; */
+            if (rotationState == 0)
             {
                 rotationState = Tiles.Length - 1;
             }
             else
             {
                 rotationState--;
-            }*/
+            }
         }
 
         public void Move(int rows, int columns)

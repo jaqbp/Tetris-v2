@@ -25,6 +25,7 @@
     <None Remove="Assets\TileOrange.png" />
     <None Remove="Assets\TilePurple.png" />
     <None Remove="Assets\TileRed.png" />
+    <None Remove="Assets\Tiles\TileWhite.png" />
     <None Remove="Assets\TileYellow.png" />
   </ItemGroup>
 
@@ -39,6 +40,7 @@
     <Resource Include="Assets\Blocks\Block-T.png" />
     <Resource Include="Assets\Blocks\Block-Z.png" />
     <Resource Include="Assets\Icon.ico" />
+    <Resource Include="Assets\Tiles\TileWhite.png" />
     <Resource Include="Assets\Tiles\TileBlue.png" />
     <Resource Include="Assets\Tiles\TileCyan.png" />
     <Resource Include="Assets\Tiles\TileEmpty.png" />
