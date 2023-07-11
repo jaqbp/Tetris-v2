@@ -14,7 +14,7 @@ namespace Tetris.Blocks
             protected override Position StartOffset => new(0, 3);
 
             protected override Position[][] Tiles => new Position[][] {
-            new Position[] {new(random.Next(3), random.Next(2)), new(random.Next(3), random.Next(2)), new(random.Next(3), random.Next(2)) }
+            new Position[] {new(random.Next(3), random.Next(2)), new(random.Next(3), random.Next(2)) }
                 };
         }
 
